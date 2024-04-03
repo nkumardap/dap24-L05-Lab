@@ -1,6 +1,14 @@
 # Your names and CNET IDs here
 
 """
+INSTRUCTIONS
+
+All members of your team should attempt all excercises
+
+When the time comes to commit only _one_ of you should commit
+"""
+
+"""
 EXCERCISE 1
 
 Create a function named calculate_average that that takes a list of numbers as 
