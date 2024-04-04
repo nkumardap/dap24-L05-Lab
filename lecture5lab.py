@@ -18,6 +18,13 @@ an empty list by returning 0.
 Hint: len(list) will return the length of a list
 """
 
+def calculate_average(numbers):
+    total = 0
+    for num in numbers:
+        total += num
+    return total/len(numbers)
+
+print(calculate_average([0,1,2]))
 """
 EXCERCISE 2
 
@@ -36,6 +43,19 @@ Hint: You will, at some point, have to loop over all integers from 0 to x
 Hint: the command isinstance(x, int) will return True if x is an instance of 
 the int data type. The same is true for float and str data types
 """
+
+def is_prime(num):
+    if isinstance(num, float):
+        return "Error 001"
+    
+    if isinstance(num, str):
+        return "Error 002"
+    
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+    
+    return True
 
 """
 EXCERCISE 3
@@ -59,3 +79,25 @@ and digits respectively:
     .isdigit()
 """
 
+def valid_password(password):
+    if len(password) <= 8:
+        return False
+    
+    has_upper = False
+    has_lower = False
+    has_digit = False
+    
+    for char in password:
+        if char.isupper():
+            has_upper = True
+        if char.islower():
+            has_lower = True
+        if char.isdigit():
+            has_digit = True
+
+    if has_upper and has_lower and has_digit:
+        return True
+    else:
+        return False
+        
+print(valid_password("QWERTYuiop123"))
